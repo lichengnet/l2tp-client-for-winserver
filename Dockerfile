@@ -21,5 +21,7 @@ RUN ln -s /etc/ipsec.conf /etc/strongswan/ipsec.conf
 RUN ln -s /etc/ipsec.secrets /etc/strongswan/ipsec.secrets
 COPY startup.sh /
 COPY reconnector.sh /
+RUN chmod +x /startup.sh
+RUN chmod +x /reconnector.sh
 
 CMD ["/startup.sh"]
